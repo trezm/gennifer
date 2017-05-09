@@ -1,0 +1,9 @@
+{
+  "name": "gennifer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "2.5.6"
+  }
+}

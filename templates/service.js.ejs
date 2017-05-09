@@ -1,0 +1,23 @@
+'use strict';
+
+import { bindInjections } from '../../components/angularHelpers';
+
+/**
+ * The best service
+ *
+ * @class services:<%= className %>Service
+ */
+export class <%= className %>Service {
+  constructor() {
+    bindInjections(this, arguments);
+  }
+}
+
+<%= className %>Service.$inject = [
+  '$http',
+  'customerService'
+];
+
+angular
+  .module('circleApp.services')
+  .service('<%= instanceName %>Service', <%= className %>Service);

@@ -1,0 +1,25 @@
+'use strict';
+
+import { bindInjections } from '../angularHelpers';
+
+/**
+ *  @class <%= className %>Controller
+ *  @memberof circleApp.components
+ *  @description A tremendous component
+ */
+class <%= className %>Controller {
+  constructor() {
+    bindInjections(this, arguments);
+  }
+}
+<%= className %>Controller.$inject = [];
+
+angular
+  .module('circleApp.components')
+  .component('<%= instanceName %>', {
+    bindings: {
+    },
+    controller: <%= className %>Controller,
+    templateUrl: '/components/<%= instanceName %>/<%= instanceName %>.component.html'
+  });
+
