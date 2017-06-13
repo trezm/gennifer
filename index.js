@@ -87,12 +87,12 @@ function compileService(name, options) {
   const instanceName = name[0].toLowerCase() + name.slice(1);
 
   if (!options.dryRun) {
-    fs.mkdirSync(`./src/assets/components/${instanceName}`);
+    fs.mkdirSync(`./src/assets/services/${instanceName}`);
   }
 
-  compileTemplate('services.js', { className: className, instanceName: instanceName })
+  compileTemplate('service.js', { className: className, instanceName: instanceName })
     .then((compiledTemplate) => writeFileWrapper(path.resolve(`./src/assets/services/${instanceName}/${instanceName}Service.js`), compiledTemplate, options))
-    .then(() => insertAlphabetizedLine(path.resolve(`./src/assets/services/index.js`), `require('./${instanceName}/${instanceName}Service.js';`, options))
+    .then(() => insertAlphabetizedLine(path.resolve(`./src/assets/services/index.js`), `require('./${instanceName}/${instanceName}Service.js');`, options))
 }
 
 /**
