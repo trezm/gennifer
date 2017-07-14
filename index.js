@@ -60,17 +60,17 @@ function compileComponent(name, options) {
     fs.mkdirSync(`./src/assets/components/${instanceName}`);
   }
 
-  compileTemplate('component.js', { className: className, instanceName: instanceName })
+  compileTemplate('component.js', { className: className.replace(options.prefix, ''), instanceName: instanceName })
     .then((compiledTemplate) => writeFileWrapper(path.resolve(`./src/assets/components/${instanceName}/${instanceName}.component.js`), compiledTemplate, options))
     .then(() => compileTemplate('component.html', { className: className }))
     .then((compiledTemplate) => writeFileWrapper(path.resolve(`./src/assets/components/${instanceName}/${instanceName}.component.html`), compiledTemplate, options))
     .then(() => compileTemplate('component.css.less', { snakeCaseName: snakeCaseName }))
     .then((compiledTemplate) => writeFileWrapper(path.resolve(`./src/assets/components/${instanceName}/${instanceName}.component.css.less`), compiledTemplate, options))
-    .then(() => compileTemplate('component-index.js', { className: className, instanceName: instanceName }))
+    .then(() => compileTemplate('component-index.js', { instanceName: instanceName }))
     .then((compiledTemplate) => writeFileWrapper(path.resolve(`./src/assets/components/${instanceName}/index.js`), compiledTemplate, options))
     .then(() => compileTemplate('component-index.css.less', { className: className, instanceName: instanceName }))
     .then((compiledTemplate) => writeFileWrapper(path.resolve(`./src/assets/components/${instanceName}/index.css.less`), compiledTemplate, options))
-    .then(() => insertAlphabetizedLine(path.resolve(`./src/assets/components/index.js`), `export { ${className} } from './${instanceName}';`, options))
+    .then(() => insertAlphabetizedLine(path.resolve(`./src/assets/components/index.js`), `export { ${instanceName} } from './${instanceName}';`, options))
     .then(() => insertAlphabetizedLine(path.resolve(`./src/assets/components/index.css.less`), `@import "./${instanceName}/index.css.less";`, options));
 }
 
