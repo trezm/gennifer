@@ -1,0 +1,18 @@
+<!doctype html>
+<!--[if (lte IE 9)]> <html class="unsupported-browser" lang="en" ng-strict-di> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--> <html lang="en" class='events' ng-strict-di> <!--<![endif]-->
+<head>
+  <%%- include ../partials/_genericHead %>
+  <%%- include _<%= instanceName %>Header %>
+  <link rel="stylesheet" href="<%%- assetPath('/stylesheets/<%- instanceName %>-application.css') %>">
+</head>
+<body class="<%= snakeCaseName %>" lang="<%%= i18n.language() %>">
+  <%= instanceName %> Works!
+
+  <%%- include _<%= instanceName %>Footer %>
+
+  <%%- include ../partials/_analytics %>
+
+  <%%- include ../partials/_unsupportedBrowser %>
+</body>
+</html>

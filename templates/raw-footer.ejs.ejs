@@ -1,0 +1,175 @@
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="logo-row">
+        <a href="/<%%= locals.urlCountry %>" class="footer-logo">
+          <%%- include icons/circle-logo.svg %>
+        </a>
+      </div>
+      <div class="footer-main-content">
+        <div class="vision">
+          <p class="vision-text"><%%- i18n.translate('index.footer.eventLanding.credo') %></p>
+        </div>
+        <div class="split-columns">
+          <div class="footer-menu-items">
+            <h5><%%- i18n.translate('index.footer.whyCircle') %></h5>
+            <ul class="menu-item-links">
+              <li>
+                <a href="/<%%= locals.urlCountry %>/transfer-money-no-fees" class="footer-menu-item">
+                  <%%- i18n.translate('index.footer.noFees') %>
+                </a>
+              </li>
+              <li>
+                <a href="/<%%= locals.urlCountry %>/security" class="footer-menu-item">
+                  <%%- i18n.translate('index.footer.moneySafe') %>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-menu-items show-mobile">
+            <h5><%%- i18n.translate('index.footer.getInTouch') %></h5>
+            <ul class="menu-item-links">
+              <li>
+                <a href="/<%%= locals.urlCountry %>/contact-us">
+                  <%%- i18n.translate('index.footer.contact') %>
+                </a>
+              </li>
+              <%% if (locals.countryVersion !== 'ROW') { %>
+                <li>
+                  <a href="http://support.circle.com/hc/<%%= locals.zendeskLocale %>" class="footer-menu-item" target="_blank">
+                    <%%= i18n.translate('zendesk.helpCenter') %>
+                  </a>
+                </li>
+              <%% } %>
+            </ul>
+          </div>
+        </div>
+        <div class="split-columns">
+          <div class="footer-menu-items middle-column">
+            <h5><%%- i18n.translate('index.footer.company') %></h5>
+            <ul class="menu-item-links">
+              <li>
+                <a href="/<%%= locals.urlCountry %>/about" class="footer-menu-item">
+                  <%%- i18n.translate('index.footer.about') %>
+                </a>
+              </li>
+              <li>
+                <a href="/<%%= locals.urlCountry %>/news" class="footer-menu-item">
+                  <%%- i18n.translate('index.footer.news') %>
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.circle.com" class="footer-menu-item">
+                  <%%= i18n.translate('index.footer.blog') %>
+                </a>
+              </li>
+              <%% if (locals.countryVersion !== 'ROW') { %>
+                <li>
+                  <a href="/<%%= locals.urlCountry %>/careers" class="footer-menu-item">
+                    <%%- i18n.translate('index.footer.careers') %>
+                  </a>
+                </li>
+                <li>
+                  <%% if(locals.urlCountry === 'en' || locals.urlCountry === 'us') { %>
+                    <a href="/en/circlesquad" class="footer-menu-item unselected" target="_blank">
+                      <%%- i18n.translate('index.footer.ambassadors') %>
+                    </a>
+                  <%% } %>
+
+                  <%% if(locals.urlCountry === 'en-gb') { %>
+                    <a href="/en-gb/students" class="footer-menu-item unselected" target="_blank">
+                      <%%- i18n.translate('index.footer.ambassadors') %>
+                    </a>
+                  <%% } %>
+
+                  <%% if(locals.urlCountry === 'en-ie') { %>
+                    <a href="/en-ie/students" class="footer-menu-item unselected" target="_blank">
+                      <%%- i18n.translate('index.footer.ambassadors') %>
+                    </a>
+                  <%% } %>
+
+                  <%% if(locals.urlCountry === 'es') { %>
+                    <a href="/es/estudiantes" class="footer-menu-item unselected" target="_blank">
+                      <%%- i18n.translate('index.footer.ambassadors') %>
+                    </a>
+                  <%% } %>
+
+                  <%% if(locals.urlCountry === 'de') { %>
+                    <a href="/de/studenten" class="footer-menu-item unselected" target="_blank">
+                      <%%- i18n.translate('index.footer.ambassadors') %>
+                    </a>
+                  <%% } %>
+
+                  <%% if(locals.urlCountry === 'fr') { %>
+                    <a href="/fr/etudiants" class="footer-menu-item unselected" target="_blank">
+                      <%%- i18n.translate('index.footer.ambassadors') %>
+                    </a>
+                  <%% } %>
+                </li>
+              <%% } %>
+            </ul>
+          </div>
+          <div class="footer-menu-items show-desktop">
+            <h5><%%- i18n.translate('index.footer.getInTouch') %></h5>
+            <ul class="menu-item-links">
+              <li>
+                <a href="/<%%= locals.urlCountry %>/contact-us">
+                  <%%- i18n.translate('index.footer.contact') %>
+                </a>
+              </li>
+              <%% if (locals.countryVersion !== 'ROW') { %>
+                <li>
+                  <a href="http://support.circle.com/hc/<%%= locals.zendeskLocale %>" class="footer-menu-item" target="_blank">
+                    <%%= i18n.translate('zendesk.helpCenter') %>
+                  </a>
+                </li>
+              <%% } %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-row">
+        <div class="container-social">
+          <div class="footer-social">
+            <a href="https://www.facebook.com/Circle-196747253842166" target="_blank" class="fb-button">
+              <%%- include icons/facebook.svg %>
+            </a>
+            <%% if (locals.isUK) { %>
+              <a href="https://twitter.com/circle_uk" target="_blank" class="twitter-button">
+                <%%- include icons/twitter.svg %>
+              </a>
+            <%% } else { %>
+              <a href="https://twitter.com/circlepay" target="_blank" class="twitter-button">
+                <%%- include icons/twitter.svg %>
+              </a>
+            <%% } %>
+            <a href="https://www.linkedin.com/company/3509899" target="_blank" class="linkedin-button">
+              <%%- include icons/linkedin.svg %>
+            </a>
+            <a href="https://www.instagram.com/circlepay/" target="_blank" class="instagram-button">
+              <%%- include icons/instagram.svg %>
+            </a>
+          </div>
+        </div>
+        <div class="container-copy">
+          <div class="footer-copyright">&copy; <%%= locals.currentYear %>
+            <%% if (locals.countryVersion === 'UK' || locals.countryVersion === 'EU') { %>
+              <%%- i18n.translate('index.footer.copyrightUK') %>
+            <%% } else { %>
+              <%%- i18n.translate('index.footer.copyright') %>
+            <%% } %>
+          </div>
+          <div class="footer-subnav">
+            <a href="/<%%= locals.urlCountry %>/privacy">
+              <%%- i18n.translate('index.footer.eventLanding.privacy') %>
+            </a>
+            <a href="/<%%= locals.urlCountry %>/user-agreement">
+              <%%- i18n.translate('index.footer.eventLanding.userAgreement') %>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+

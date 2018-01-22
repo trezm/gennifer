@@ -1,0 +1,505 @@
+@gray-darkest: #2b2b2b;
+@gray-footer-text: #BBBBBB;
+@bright-green: @bright-green-100;
+
+footer {
+  * {
+    box-sizing: initial;
+  }
+
+  h5 {
+    font-size: 12px;
+    color: @gray-footer-text;
+    margin-bottom: 10px;
+    text-align: left;
+    .semibold;
+    .uppercase;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:link, a:visited, a:active {
+    color: #717171;
+  }
+  a:hover {
+    text-decoration: none;
+    color: @white;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .footer-main {
+    background-color: @gray-darkest;
+    color: @white;
+    position: relative;
+    .box-sizing;
+    padding: 40px 30px 60px 30px;
+    .logo-row {
+      padding-bottom: 20px;
+    }
+    .vision {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .vision-text {
+      font-size: 18px;
+      line-height: 24px;
+      color: @gray-footer-text;
+      text-align: left;
+      padding-right: 120px;
+    }
+    .vision-highlight {
+      color: @bright-green;
+      .semibold;
+    }
+    .split-columns {
+      display: inline;
+    }
+    .footer-menu-items {
+      width: 14%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .show-desktop {
+      display: inline-block !important;
+    }
+    .show-mobile {
+      display: none !important;
+    }
+    .middle-column {
+      padding-left: 40px;
+    }
+    .menu-item-links {
+      font-size: 14px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      li {
+        padding-bottom: 7px;
+      }
+    }
+    .footer-logo {
+      display: block;
+      width: 167px;
+      height: 57px;
+    }
+  }
+  .footer-social {
+    text-align: left;
+    .fb-button, .linkedin-button, .twitter-button, .instagram-button {
+      display: inline-block;
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 9px;
+        fill: #717171;
+      }
+      &:hover {
+        svg {
+          fill: @white;
+        }
+      }
+    }
+  }
+  .bottom-row {
+    display: block;
+    padding: 30px 0;
+    .container-social {
+      float: right;
+      display: inline-block;
+      width: 170px;
+    }
+    .container-copy {
+      max-width: 620px;
+      width: 80%;
+      float: left;
+      display: inline-block;
+      .footer-copyright {
+        color: @gray-footer-text;
+        font-size: 12px;
+        letter-spacing: 0.025em;
+        text-align: left;
+        margin-right: 25px;
+        display: inline-block;
+      }
+      .footer-subnav {
+        text-align: left;
+        display: inline-block;
+        a:link, a:visited, a:active {
+          color: #717171;
+          font-size: 12px;
+          letter-spacing: 0.025em;
+          &:nth-child(2) {
+            margin: 0 20px;
+          }
+        }
+        a:hover {
+          color: @white;
+          font-size: 12px;
+          letter-spacing: 0.025em;
+          &:nth-child(2) {
+            margin: 0 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media @tabletMQ {
+  footer .bottom-row .container-copy {
+    max-width: 475px;
+  }
+}
+
+@media @tabletMQ, @phoneMQ {
+  footer {
+    .footer-main {
+      .vision {
+        width: 100%;
+        display: block;
+        .vision-text {
+          padding-right: 0px;
+        }
+      }
+      .footer-menu-items {
+        width: 25%;
+      }
+      .middle-column {
+        padding-left: 25px;
+      }
+    }
+  }
+}
+
+
+@media @phoneMQ {
+  footer {
+    .footer-main {
+      .split-columns {
+        width: 49%;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .footer-menu-items {
+        width: 100%;
+        display: block;
+      }
+      .show-desktop {
+        display: none !important;
+      }
+      .show-mobile {
+        display: block !important;
+      }
+      .bottom-row {
+        .container-social {
+          float: none;
+          padding-bottom: 10px;
+          width: 100%;
+        }
+        .container-copy {
+          width: 100%;
+          float: none;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .dark-footer {
+    background:@gray-darkest;
+    color: #bbbbbb;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 40px 30px 30px 30px;
+    text-align: left;
+    margin-top: 30px;
+    display: block;
+
+    .dark-footer-container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+
+      h5 {
+        font-size: 12px;
+        color: @gray-footer-text;
+        margin-bottom: 10px;
+        text-align: left;
+        .semibold;
+        .uppercase;
+      }
+
+      .top-row {
+        padding-bottom: 20px;
+      }
+
+      .footer-logo {
+        background-image: url(/marketing/assets/images/logo-with-text-darkbg.png);
+        background-size: 167px 57px;
+        display: inline-block;
+        width: 167px;
+        height: 57px;
+      }
+
+      .vision {
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .vision-text {
+        font-size: 18px;
+        line-height: 24px;
+        color: @gray-footer-text;
+        text-align: left;
+        padding: 0;
+        margin-bottom: 0;
+      }
+      .vision-highlight {
+        color: @bright-green;
+        .semibold;
+      }
+
+      a {
+        color:#777777;
+      }
+
+      a:hover {
+        color:#dddddd;
+      }
+
+      .footer-social {
+        text-align: left;
+        .fb-button, .linkedin-button, .twitter-button, .instagram-button {
+          display: inline-block;
+          svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 9px;
+            fill: #717171;
+          }
+          &:hover {
+            svg {
+              fill: @white;
+            }
+          }
+        }
+      }
+      .bottom-row {
+        display: block;
+        padding: 30px 0;
+        .container-social {
+          float: right;
+          display: block;
+          width: 100%;
+        }
+        .container-copy {
+          width: 100%;
+          display: block;
+          max-width: 960px;
+          padding-top: 10px;
+          float: none;
+          .footer-copyright {
+            color: @gray-footer-text;
+            font-size: 12px;
+            letter-spacing: 0.025em;
+            text-align: left;
+            margin-right: 25px;
+            display: inline-block;
+          }
+          .footer-subnav {
+            text-align: left;
+            display: inline-block;
+            a:link, a:visited, a:active {
+              color: #717171;
+              font-size: 12px;
+              letter-spacing: 0.025em;
+              &:nth-child(2) {
+                margin: 0 20px;
+              }
+            }
+            a:hover {
+              color: @white;
+              font-size: 12px;
+              letter-spacing: 0.025em;
+              &:nth-child(2) {
+                margin: 0 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .link-columns {
+        width: 25%;
+        float: left;
+        @media (max-width: 680px) {
+          width: 50%;
+          display: block;
+        }
+        @media (max-width: 485px) {
+          width: 100%;
+          display: block;
+        }
+
+        h3 {
+          font-size: 18px;
+          line-height: 22px;
+          color: #bbbbbb;
+          text-transform: uppercase;
+          .semibold;
+          margin-top: 5px;
+          margin-bottom: 7px;
+        }
+      }
+
+      @media (max-width: 485px) {
+        .link-columns.friends {
+          padding-top: 35px;
+        }
+      }
+
+      .appstore {
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        left: 285px;
+
+        a {
+          width: 130px;
+          height: 40px;
+          display: inline-block;
+        }
+        a.appstore-apple {
+          background: url(/marketing/assets/images/appstoreButtons/appstore-button.png);
+          background-repeat: no-repeat;
+          background-size: 130px 40px;
+          margin-right: 7px;
+        }
+        a.appstore-android {
+          background: url(/marketing/assets/images/appstoreButtons/playstore-button.png);
+          background-repeat: no-repeat;
+          background-size: 130px 40px;
+        }
+      }
+      :lang(es) {
+        .appstore a.appstore-apple {
+          background-image: url(/marketing/assets/images/appstoreButtons/appstore-button-es.png);
+        }
+      }
+      :lang(es) {
+        .appstore a.appstore-android {
+          background-image: url(/marketing/assets/images/appstoreButtons/playstore-button-es.png);
+        }
+      }
+      :lang(de) {
+        .appstore a.appstore-apple {
+          background-image: url(/marketing/assets/images/appstoreButtons/appstore-button-de.png);
+        }
+      }
+      :lang(de) {
+        .appstore a.appstore-android {
+          background-image: url(/marketing/assets/images/appstoreButtons/playstore-button-de.png);
+        }
+      }
+
+      :lang(it) {
+        .appstore a.appstore-apple {
+          background-image: url(/marketing/assets/images/appstoreButtons/appstore-button-it.png);
+        }
+      }
+      :lang(it) {
+        .appstore a.appstore-android {
+          background-image: url(/marketing/assets/images/appstoreButtons/playstore-button-it.png);
+        }
+      }
+
+      .app-button-clear {
+        .clearfix();
+      }
+    }
+    @media (max-width: 980px) {
+      .show-mobile {
+        display: block;
+      }
+    }
+    @media (min-width: 980px) {
+      .show-mobile {
+        display: none !important;
+      }
+    }
+    @media (max-width: 980px) {
+      .show-desktop {
+        display: none !important;
+      }
+    }
+    @media (min-width: 980px) {
+      .show-desktop {
+        display: block;
+      }
+    }
+  }
+}
+
+@media @tabletMQ {
+  footer .dark-footer .dark-footer-container .bottom-row .container-copy {
+    max-width: 475px;
+  }
+}
+
+@media @tabletMQ, @phoneMQ {
+  footer {
+    .dark-footer {
+      .dark-footer-container {
+        .vision {
+          width: 100%;
+          display: block;
+          .vision-text {
+            padding-right: 0px;
+          }
+        }
+        .footer-menu-items {
+          width: 25%;
+        }
+        .middle-column {
+          padding-left: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media @phoneMQ {
+  footer {
+    .dark-footer {
+      .dark-footer-container {
+        .split-columns {
+          width: 49%;
+          display: inline-block;
+          vertical-align: top;
+        }
+        .footer-menu-items {
+          width: 100%;
+          display: block;
+        }
+        .bottom-row {
+          .container-social {
+            float: none;
+            padding-bottom: 10px;
+            width: 100%;
+          }
+          .container-copy {
+            width: 100%;
+            float: none;
+          }
+        }
+      }
+    }
+  }
+}
